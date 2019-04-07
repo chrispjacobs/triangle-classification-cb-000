@@ -13,7 +13,7 @@ class Triangle
       @kind = nil
     end
   end
-  def special_triangle_check
+  def kind
     if @side_one == @side_two && @side_one != @side_three
       @kind = :isosceles
     elsif @side_one == @side_three && @side_one != @side_two
@@ -24,6 +24,11 @@ class Triangle
       @kind = :equilateral
     else
       @kind = :scalene
+    end
+  end
+  class TriangleError < StandardError
+    def message
+      "This combination of triangle sides is impossible!"
     end
   end
 end
