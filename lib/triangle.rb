@@ -38,3 +38,6 @@ class Triangle
     end
   end
 end
+
+triangle = Triangle.new(0, 1, 1)
+puts triangle.kind
